@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Product Brief Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">AI PRODUCT LAB / 01</p>
+        <h1>把 AI 点子变成<br /><em>可验证的产品简报。</em></h1>
+        <p class="lede">用几个关键问题，厘清用户、价值、风险和第一轮实验。无需 API Key，所有内容仅在当前浏览器生成。</p>
+      </section>
+
+      <section class="workspace">
+        <form id="brief-form" class="card form-card">
+          <label>产品想法<input name="idea" required placeholder="例如：帮助销售在通话后快速整理跟进邮件" /></label>
+          <label>目标用户<input name="user" required placeholder="例如：中小团队的 B2B 销售" /></label>
+          <label>用户当前的痛点<textarea name="pain" required placeholder="他们在哪个环节花时间、出错或放弃？"></textarea></label>
+          <label>AI 要完成的核心任务<input name="task" required placeholder="例如：从会议记录中提取承诺事项并起草邮件" /></label>
+          <label>最大的顾虑 / 风险<input name="risk" required placeholder="例如：邮件语气不准确、客户信息泄露" /></label>
+          <button type="submit">生成产品简报 <span>→</span></button>
+        </form>
+
+        <article id="output" class="card output-card empty" aria-live="polite">
+          <p class="eyebrow">YOUR BRIEF</p>
+          <h2>从一个具体问题开始。</h2>
+          <p>填写左侧内容后，这里会生成一份可复制、可讨论的 AI 产品简报。</p>
+        </article>
+      </section>
+    </main>
+    <footer>Built as a human–AI collaboration experiment · AI Product Lab</footer>
+    <script src="app.js"></script>
+  </body>
+</html>
